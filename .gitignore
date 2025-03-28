@@ -135,4 +135,4 @@ out
 .pnp.*
 
 .DS_Store
-package_lock.json
+package-lock.json

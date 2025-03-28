@@ -1,0 +1,40 @@
+{
+  "name": "tiktoken-bundle",
+  "version": "0.0.1",
+  "description": "offline-capable ESM module for cl100k_base tokenization in the browser",
+  "type": "module",
+  "main": "dist/tiktoken-bundle.js",
+  "module": "dist/tiktoken-bundle.js",
+  "exports": {
+    ".": "./dist/tiktoken-bundle.js"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "build:types": "tsc --emitDeclarationOnly",
+    "prepublishOnly": "npm run build:types && npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "tiktoken",
+    "tokens",
+    "tokenizer",
+    "cl100k_base",
+    "browser"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "js-tiktoken": "^1.0.19"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vitest": "^0.34.4",
+    "terser": "^5.19.4"
+  }
+}

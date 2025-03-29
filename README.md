@@ -85,7 +85,7 @@ const Tokenization = TokenizationOfText('Hello, world!')
 * `TokensOfText(Text:string): number[]` - converts `Text` to an array of token IDs
 * `TextFromTokens(TokenList:number[]):string` - converts an array of token IDs back to text
 * `NumberOfTokensInText(Text:string):number` - counts the number of tokens in `Text`
-* `TokenizationOfText(Text:string): [number,string][]` - returns an array of token ID and token string pairs
+* `TokenizationOfText(Text:string):[number,string][]` - returns an array of token ID and token string pairs
 
 ## Build Instructions ##
 

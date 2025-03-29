@@ -49,9 +49,43 @@ const Tokenization = TokenizationOfText('Hello, world!')
 // ]
 ```
 
+## Usage within Svelte ##
 
+For Svelte, it is recommended to import the package in a module context:
 
+```html
+<script context="module">
+import {
+  TokensOfText, TextFromTokens, NumberOfTokensInText, TokenizationOfText
+} from 'tiktoken-bundle'
+</script>
 
+<script>
+const Tokens = TokensOfText('Hello, world!')
+// [9906, 11, 4435, 0]
+
+const Text = TextFromTokens([9906, 11, 4435, 0])
+// 'Hello, world!'
+
+const NumberOfTokens = NumberOfTokensInText('Hello, world!')
+// 4
+
+const Tokenization = TokenizationOfText('Hello, world!')
+// [
+//   [9906, 'Hello'],
+//   [11, ', '],
+//   [4435, 'world'],
+//   [0, '!']
+// ]
+</script>
+```
+
+## API Reference
+
+* `TokensOfText(Text:string): number[]` - converts `Text` to an array of token IDs
+* `TextFromTokens(TokenList:number[]):string` - converts an array of token IDs back to text
+* `NumberOfTokensInText(Text:string):number` - counts the number of tokens in `Text`
+* `TokenizationOfText(Text:string): [number,string][]` - returns an array of token ID and token string pairs
 
 ## Build Instructions ##
 

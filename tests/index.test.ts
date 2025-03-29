@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { TokensOfText, TextFromTokens, NumberOfTokensInText, TokenizationOfText } from '../src/index'
+import { TokensOfText, TextFromTokens, NumberOfTokensInText, TokenizationOfText } from '../src/tiktoken-bundle'
 
 describe('tiktoken-bundle', () => {
 

@@ -6,6 +6,49 @@ This JavaScript/TypeScript library provides tokenization functionality using the
 
 ![Screenshot of Demo](./Screenshot.png)
 
+## Installation ##
+
+The `tiktoken-bundle` comes as an ECMAScript module (ESM). You may either install the module using `npm` (or similar) if you still plan to use a bundler:
+
+```bash
+npm install tiktoken-bundle
+```
+
+Or you may dynamically import it using an `import` expression
+
+```javascript
+const {
+  TokensOfText, TextFromTokens, NumberOfTokensInText, TokenizationOfText
+} = await import("https://rozek.github.io/tiktoken-bundle/dist/tiktoken-bundle.js")
+```
+
+## Usage in Node.js or Browser Environments ##
+
+Assuming that you have installed the module, you may proceed as follows
+
+```typescript
+import {
+  TokensOfText, TextFromTokens, NumberOfTokensInText, TokenizationOfText
+} from 'tiktoken-bundle'
+
+const Tokens = TokensOfText('Hello, world!')
+// [9906, 11, 4435, 0]
+
+const Text = TextFromTokens([9906, 11, 4435, 0])
+// 'Hello, world!'
+
+const NumberOfTokens = NumberOfTokensInText('Hello, world!')
+// 4
+
+const Tokenization = TokenizationOfText('Hello, world!')
+// [
+//   [9906, 'Hello'],
+//   [11, ', '],
+//   [4435, 'world'],
+//   [0, '!']
+// ]
+```
+
 
 
 

@@ -1,6 +1,6 @@
 # tiktoken-bundle #
 
-offline-capable ESM module for cl100k_base tokenization in the browser [Live Demo](https://rozek.de/applets/Tokenization.html)
+offline-capable ESM module for cl100k_base tokenization in the browser ([Live Demo](https://rozek.de/applets/Tokenization.html))
 
 This JavaScript/TypeScript library provides tokenization functionality using the cl100k_base encoding (the same encoding used by GPT-3.5 and GPT-4 models) and is specifically designed to work in browser environments without network requests.
 
